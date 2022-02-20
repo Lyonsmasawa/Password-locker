@@ -1,6 +1,7 @@
 from User import User
 from Credentials import Credentials
 
+#deals with user class
 def createuser(user_name, user_passwd):
     """
     Create user account
@@ -31,3 +32,5 @@ def verifyusernameandpasswd(user_name, user_passwd):
     Verify the user and password exists in the given lists
     """
     return User.verify_username_and_password(user_name, user_passwd)
+
+# mostly deals with credentials class
