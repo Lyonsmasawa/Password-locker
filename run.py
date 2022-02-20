@@ -1,4 +1,3 @@
-from pprint import pprint
 from User import User
 from Credentials import Credentials
 
@@ -76,11 +75,28 @@ def generatepasswd(self):
     return Credentials.generate_password(self)
 
 def intro():
-    print(" .____                                  __________                                               .___    _____                                              ")
-    print(" |    |    ___.__. ____   ____   ______ \______   \_____    ______ ________  _  _____________  __| _/   /     \ _____    ____ _____     ____   ___________  ")
-    print(" |    |   <   |  |/  _ \ /    \ /  ___/  |     ___/\__  \  /  ___//  ___/\ \/ \/ /  _ \_  __ \/ __ |   /  \ /  \\__  \  /    \\__  \   / ___\_/ __ \_  __ \ ")
-    print(" |    |___ \___  (  <_> )   |  \\___ \   |    |     / __ \_\___ \ \___ \  \     (  <_> )  | \/ /_/ |  /    Y    \/ __ \|   |  \/ __ \_/ /_/  >  ___/|  | \/ ")
-    print(" |_______ \/ ____|\____/|___|  /____  >  |____|    (____  /____  >____  >  \/\_/ \____/|__|  \____ |  \____|__  (____  /___|  (____  /\___  / \___  >__|    ")
-    print("         \/\/                \/     \/                  \/     \/     \/                          \/          \/     \/     \/     \//_____/      \/        ")
-    print("                                                                                                                                                            ")
-    
+    print("          .____                                      __________                                               .___    _____                                                  ")
+    print("          |    |    ___.__. ____   ____   ______     \______   \_____    ______ ________  _  _____________  __| _/   /     \ _____    ____ _____     ____   ___________      ")
+    print("          |    |   <   |  |/  _ \ /    \ /  ___/      |     ___/\__  \  /  ___//  ___/\ \/ \/ /  _ \_  __ \/ __ |   /  \ /  \\__  \  /    \\__  \   / ___\_/ __ \_  __ \     ")
+    print("          |    |___ \___  (  <_> )   |  \\___ \       |    |     / __ \_\___ \ \___ \  \     (  <_> )  | \/ /_/ |  /    Y    \/ __ \|   |  \/ __ \_/ /_/  >  ___/|  | \/     ")
+    print("          |_______ \/ ____|\____/|___|  /____  >      |____|    (____  /____  >____  >  \/\_/ \____/|__|  \____ |  \____|__  (____  /___|  (____  /\___  / \___  >__|        ")
+    print("                  \/\/                \/     \/                      \/     \/     \/                          \/          \/     \/     \/     \//_____/      \/            ")
+    print("                                                                                                                                                                         ")
+
+def main():
+    intro()
+    print("                   Welcome to my password manager                ")
+    print("Please input name")
+    name = input().upper()
+    if name != "":
+         print(f"\n Hello {name}")
+         while True:
+             print("Please pick one of the options below to proceed (Type it into the console)")
+             print("     SignUP ---> New Account       ")
+             print("     Login ---> Login to Account       ")
+             user_option = input().strip().lower()
+
+             if user_option
+
+if __name__ == '__main__':
+    main()
