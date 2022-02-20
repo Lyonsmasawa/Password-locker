@@ -122,6 +122,11 @@ def main():
     
     #save new user
     saveuser(createuser(user_name,user_passwd))
+    print("   Account created successfully   ")
+    print(            " | "   "*" * 30," | "          )
+    print("        ")
+    print(f" Username: {user_name}, Password: {user_passwd}  ")
+
 
 if __name__ == '__main__':
     main()
