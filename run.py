@@ -90,13 +90,38 @@ def main():
     name = input().upper()
     if name != "":
          print(f"\n Hello {name}")
-         while True:
-             print("Please pick one of the options below to proceed (Type it into the console)")
-             print("     SignUP ---> New Account       ")
-             print("     Login ---> Login to Account       ")
-             user_option = input().strip().lower()
+    else:
+        print(" Hello Anonymous ")
+    print("Please pick one of the options below to proceed (Type it into the console)")
+    print("     sign ---> New Account       ")
+    print("     login ---> Login to Account       ")
+    user_option = input().lower().strip()
 
-             if user_option
+    if user_option == "sign":
+        print("Sign Up to Password Locker")
+        print("        ")
+        print(            " | "   "*" * 30," | "          )
+        print("        ")
+        user_name = input("Enter preferred username: "  )
+        while True:
+            print(f"       \n     Username: {user_name} "   )
+            print("Please pick one password option below to proceed (Type it into the console)")
+            print("     create ---> Create password     ")
+            print("     gen ---> generate password      ")
+            pass_option = input().lower().strip()
+
+            if pass_option == "create":
+                user_passwd = input(" Enter preffered Password: ")
+                break
+            elif pass_option == "gen":
+                user_passwd = ""
+                user_passwd = generatepasswd(user_passwd)
+                break
+            else:
+                print(" please select an available option!!! ")
+    
+    #save new user
+    
 
 if __name__ == '__main__':
     main()
