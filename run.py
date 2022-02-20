@@ -1,3 +1,5 @@
+from curses.ascii import CR
+from hashlib import new
 from User import User
 from Credentials import Credentials
 
@@ -34,3 +36,11 @@ def verifyusernameandpasswd(user_name, user_passwd):
     return User.verify_username_and_password(user_name, user_passwd)
 
 # mostly deals with credentials class
+def create_credentials(platform, username, password):
+    """
+    creates a new credential
+    """
+    new_cred = Credentials(platform, username, password)
+    return new_cred
+
+ 
