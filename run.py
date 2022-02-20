@@ -54,3 +54,15 @@ def deletecred(credentials):
     delete credentials
     """
     credentials.delete_cred()
+
+def listcred(credentials):
+    """
+    List credentials stored
+    """
+    credentials.list_creds()
+
+def findplatformcred(platform):
+    """
+    find credentials based on platform
+    """
+    return Credentials.find_platform_cred(platform)
