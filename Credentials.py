@@ -1,3 +1,6 @@
+from platform import platform
+
+
 class Credentials:
     """
     Create new instance of credentials
@@ -15,6 +18,7 @@ class Credentials:
         """
         Credentials.crendetials_list.append(self)
 
+    @classmethod
     def list_creds():
         """
         lists the existing credentials
@@ -26,3 +30,12 @@ class Credentials:
         Deletes credentias from the credential List
         """    
         Credentials.crendetials_list.remove(self)
+
+    @classmethod
+    def find_platform_cred(cls, platform):
+        """
+        Find saved credential by platform
+        """
+        for cred in cls.credentials_list:
+            if cred.platform == platform:
+                return cred
