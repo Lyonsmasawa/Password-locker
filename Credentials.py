@@ -8,7 +8,7 @@ class Credentials:
     """
     Create new instance of credentials
     """
-    crendetials_list = []
+    credentials_list = []
 
     def __init__(self, platform, username, password):
         self.platform = platform
@@ -19,20 +19,20 @@ class Credentials:
         """
         Saves the new credentials to the credentials list
         """
-        Credentials.crendetials_list.append(self)
+        Credentials.credentials_list.append(self)
 
     @classmethod
     def list_creds():
         """
         lists the existing credentials
         """
-        return Credentials.crendetials_list
+        return Credentials.credentials_list
 
     def delete_cred(self):
         """
-        Deletes credentias from the credential List
+        Deletes credentials from the credential List
         """    
-        Credentials.crendetials_list.remove(self)
+        Credentials.credentials_list.remove(self)
 
     @classmethod
     def find_platform_cred(cls, platform):

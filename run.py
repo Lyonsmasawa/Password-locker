@@ -156,7 +156,7 @@ def main():
                 user_option2 = input().lower().strip()
 
                 if user_option2 == "new":
-                    platform = input(" Enter Platform to proceed ")
+                    platform = input(" Enter Platform to proceed ").lower().strip(" ")
                     username = input("Enter platform usernamr here . . . ")
                     while True:
                         print("Please pick one password option below to proceed (Type it into the console)")
@@ -181,8 +181,22 @@ def main():
                     print(f" Platform: {platform} Username: {username}, Password: {password}  ")
                     break
                 elif user_option2 == "delete":
-                    print("Enter plaform credentials to delete")
-                    
+                    platformname = input(" Enter Platform Name: ").lower().strip(" ")
+                    credtodel = findplatformcred(platformname)
+                    credtodel.deletecred()  
+                    print(" Credential deleted successfully")
+                elif user_option2 == "list":
+                    if listcred():
+                        print("         Saved Credentials      ")
+                        for cred in listcred():
+                         print(f"Platform: {platform}  Username: {username} Password: {password}")
+                        else:
+                            print("List is empty at the moment")
+                elif user_option2 == "exit":
+                    print("See you later!")
+                    break
+                else:
+                    print("please restart the application")
  
 if __name__ == '__main__':
     main()
