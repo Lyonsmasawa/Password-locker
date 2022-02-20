@@ -15,6 +15,12 @@ class Credentials:
         """
         Credentials.crendetials_list.append(self)
 
+    def list_creds():
+        """
+        lists the existing credentials
+        """
+        return Credentials.crendetials_list
+
     def delete_cred(self):
         """
         Deletes credentias from the credential List
