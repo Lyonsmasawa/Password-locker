@@ -13,3 +13,6 @@ class Credentials:
         """
         Saves the new credentials to the credentials list
         """
+        Credentials.crendetials_list.append(self)
+
+    
