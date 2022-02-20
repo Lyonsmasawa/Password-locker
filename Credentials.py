@@ -1,4 +1,7 @@
-from platform import platform
+
+
+import random
+import string
 
 
 class Credentials:
@@ -48,3 +51,11 @@ class Credentials:
             if cred.platform == platform:
                 return True
         return False
+
+    def generate_password(passwordLength):
+        '''
+        method that generates a random password for the user
+        '''
+        generated = string.ascii_letters + string.digits + "!"
+        gen_password = ''.join(random.choice(generated) for i in range(2,11))
+        return gen_password
