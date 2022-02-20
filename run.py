@@ -55,7 +55,7 @@ def deletecred(credentials):
     """
     credentials.delete_cred()
 
-def listcred(credentials):
+def listcred():
     """
     List credentials stored
     """
@@ -66,3 +66,9 @@ def findplatformcred(platform):
     find credentials based on platform
     """
     return Credentials.find_platform_cred(platform)
+
+def checkexists(platform):
+    """
+    Checks the existance of a platforms credentials
+    """
+    return  Credentials.cred_exist(platform)
