@@ -15,4 +15,8 @@ class Credentials:
         """
         Credentials.crendetials_list.append(self)
 
-    
+    def delete_cred(self):
+        """
+        Deletes credentias from the credential List
+        """    
+        Credentials.crendetials_list.remove(self)
