@@ -121,7 +121,7 @@ def main():
                 print(" please select an available option!!! ")
     
     #save new user
-    
+    saveuser(createuser(user_name,user_passwd))
 
 if __name__ == '__main__':
     main()
