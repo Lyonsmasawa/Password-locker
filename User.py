@@ -1,8 +1,3 @@
-#this file contains the User class and the Credentials class
-from curses.ascii import US
-from re import U
-
-
 class User: 
     
     """
