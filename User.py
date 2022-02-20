@@ -37,12 +37,12 @@ class User:
                 return user
 
     @classmethod
-    def verify_username_and_password(cls, user_name, passwd):
+    def verify_username_and_password(cls, user_name, user_passwd):
         """
         verify user by looking up the username and password of the given user
         """
         for user in User.user_list:
-            if user.user_name == user_name and user.passwd == passwd:
+            if user.user_name == user_name and user.user_passwdd == user_passwd:
                 return True
         return False
 
