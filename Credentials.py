@@ -39,3 +39,12 @@ class Credentials:
         for cred in cls.credentials_list:
             if cred.platform == platform:
                 return cred
+
+    def cred_exist(cls, platform):
+        """
+        Checks if a credential exists
+        """
+        for cred in cls.credentials_list:
+            if cred.platform == platform:
+                return True
+        return False
