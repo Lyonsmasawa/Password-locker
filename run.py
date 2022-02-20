@@ -47,5 +47,10 @@ def savecred(credentials):
     """
     Save user credentials
     """
-    Credentials.save_cred()
+    credentials.save_cred()
 
+def deletecred(credentials):
+    """
+    delete credentials
+    """
+    credentials.delete_cred()
