@@ -1,5 +1,5 @@
+
 from curses.ascii import CR
-from hashlib import new
 from User import User
 from Credentials import Credentials
 
@@ -59,7 +59,7 @@ def listcred():
     """
     List credentials stored
     """
-    credentials.list_creds()
+    return Credentials.list_creds()
 
 def findplatformcred(platform):
     """
@@ -72,3 +72,6 @@ def checkexists(platform):
     Checks the existance of a platforms credentials
     """
     return  Credentials.cred_exist(platform)
+
+def generatepasswd(self):
+    return Credentials.generate_password(self)
