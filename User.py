@@ -1,5 +1,6 @@
 #this file contains the User class and the Credentials class
 from curses.ascii import US
+from re import U
 
 
 class User: 
@@ -30,6 +31,25 @@ class User:
         deletes a user from the user list
         """
         User.user_list.remove(self)
+
+    @classmethod
+    def verify_username(cls, user_name):
+        """
+        looks up username in Users List
+        """
+        for user in User.user_list:
+            if user.user_name == user_name:
+                return user
+
+    @classmethod
+    def verify_username_and_password(cls, user_name, passwd):
+        """
+        verify user by looking up the username and password of the given user
+        """
+        for user in User.user_list:
+            if user.user_name == user_name and user.passwd == passwd:
+                return True
+        return False
 
 
 
