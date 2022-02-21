@@ -1,5 +1,3 @@
-from math import fabs
-from platform import platform
 from User import User
 from Credentials import Credentials
 
@@ -189,7 +187,7 @@ def main():
                     if listcred():
                         print("         Saved Credentials      ")
                         for cred in listcred():
-                         print(f"Platform: {platform}  Username: {username} Password: {password}")
+                         print(f"Platform: {Credentials.platform}   Username: {Credentials.username} Password: {Credentials.password}")
                         else:
                             print("List is empty at the moment")
                 elif user_option2 == "exit":
