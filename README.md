@@ -2,7 +2,8 @@
 
 ### Description
 
-This is a basic python application for password management
+This is a basic python application for password management,
+The user can create account to store credential, It allows adding, deleting and viewing of stored credentials.
 
 ## Project Peek
 <img src="peek.png">
